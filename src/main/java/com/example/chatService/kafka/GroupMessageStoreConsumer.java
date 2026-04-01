@@ -23,7 +23,7 @@ public class GroupMessageStoreConsumer {
             containerFactory = "groupKafkaListenerContainerFactory"
     )
     public void store(GroupMessageDto dto) {
-        GroupMessageEntity message = GroupMessageEntity.from(dto);
+        GroupMessageEntity message = GroupMessageEntity.Companion.from(dto);
         groupMessageRepository.save(message);
     }
 }

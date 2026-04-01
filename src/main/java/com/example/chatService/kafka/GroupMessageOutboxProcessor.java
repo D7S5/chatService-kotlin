@@ -44,13 +44,12 @@ public class GroupMessageOutboxProcessor {
 
         for (GroupOutbox box : list) {
             try {
-                GroupMessageDto message = GroupMessageDto.builder()
-                        .roomId(box.getRoomId())
-                        .senderId(box.getSenderId())
-                        .senderName(box.getSenderName())
-                        .sentAt(box.getEventTimestamp())
-                        .content(box.getContent())
-                        .build();
+                GroupMessageDto message = new GroupMessageDto(
+                        box.getRoomId(),
+                        box.getSenderId(),
+                        box.getSenderName(),
+                        box.getContent(),
+                        box.getEventTimestamp());
 
                 kafkaTemplate.send(TOPIC, box.getRoomId(), message);
 
