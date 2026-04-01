@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a450b2f7-d39b-44fb-8aa0-ae68f60caeb7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/chatService/kafka/GroupMessageOutboxProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chatService/kafka/GroupMessageOutboxProcessor.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="35h5TtLk3kr2TknJokwSVJw3m4B" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/austin/IdeaProjects/chatService/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;52ab73a74ea3498f9ec54db4d3f64aef&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.chatservice.security" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.chatService.oauth" />
+      <recent name="com.example.chatservice.service" />
+      <recent name="com.example.chatservice.redis" />
+      <recent name="com.example.chatservice.security" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ChatServiceApplication">
+    <configuration name="ChatServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="chatService.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.chatservice.ChatServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChatServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="chatService.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.chatService.ChatServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a450b2f7-d39b-44fb-8aa0-ae68f60caeb7" name="Changes" comment="" />
+      <created>1763549475650</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763549475650</updated>
+      <workItem from="1763549477263" duration="18740000" />
+      <workItem from="1763705043990" duration="29000" />
+      <workItem from="1763705919771" duration="8220000" />
+      <workItem from="1763790660410" duration="16016000" />
+      <workItem from="1763890882386" duration="8120000" />
+      <workItem from="1764048727953" duration="35315000" />
+      <workItem from="1764397425009" duration="8375000" />
+      <workItem from="1764411403910" duration="111335000" />
+      <workItem from="1765369920895" duration="777000" />
+      <workItem from="1765370711582" duration="29892000" />
+      <workItem from="1765693169986" duration="71788000" />
+      <workItem from="1766209472698" duration="23000000" />
+      <workItem from="1766392019296" duration="20384000" />
+      <workItem from="1766653498117" duration="4256000" />
+      <workItem from="1766727726156" duration="85153000" />
+      <workItem from="1767577379957" duration="494000" />
+      <workItem from="1767577884492" duration="92296000" />
+      <workItem from="1768369817073" duration="4713000" />
+      <workItem from="1768457150732" duration="1357000" />
+      <workItem from="1768462924474" duration="848000" />
+      <workItem from="1768886889911" duration="784000" />
+      <workItem from="1768890208366" duration="821000" />
+      <workItem from="1769064536979" duration="275000" />
+      <workItem from="1769140245752" duration="42000" />
+      <workItem from="1769150456711" duration="42000" />
+      <workItem from="1769755526185" duration="1272000" />
+      <workItem from="1769832512110" duration="10000" />
+      <workItem from="1769837627168" duration="1480000" />
+      <workItem from="1769923423840" duration="4526000" />
+      <workItem from="1770007228513" duration="6266000" />
+      <workItem from="1770092533424" duration="3391000" />
+      <workItem from="1770096206922" duration="617000" />
+      <workItem from="1770098676689" duration="536000" />
+      <workItem from="1771225513013" duration="17363000" />
+      <workItem from="1771483974795" duration="17000" />
+      <workItem from="1771485438375" duration="838000" />
+      <workItem from="1771655208919" duration="5103000" />
+      <workItem from="1771746646073" duration="417000" />
+      <workItem from="1771926090286" duration="792000" />
+      <workItem from="1771996074743" duration="6372000" />
+      <workItem from="1772024046152" duration="17699000" />
+      <workItem from="1772262575300" duration="294000" />
+      <workItem from="1772344628846" duration="220000" />
+      <workItem from="1772432265268" duration="9337000" />
+      <workItem from="1772628032475" duration="3020000" />
+      <workItem from="1772772847402" duration="2311000" />
+      <workItem from="1772782104750" duration="23271000" />
+      <workItem from="1773120862893" duration="4628000" />
+      <workItem from="1773205718806" duration="175000" />
+      <workItem from="1773206412672" duration="1334000" />
+      <workItem from="1773294519879" duration="5288000" />
+      <workItem from="1773300968074" duration="389000" />
+      <workItem from="1773380609704" duration="5051000" />
+      <workItem from="1773467112487" duration="7270000" />
+      <workItem from="1773550317940" duration="431000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
