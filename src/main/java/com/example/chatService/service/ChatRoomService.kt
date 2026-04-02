@@ -23,7 +23,7 @@ class ChatRoomService(
         private val inviteService: RoomInviteService
 ) {
     fun getAllRooms() : List<ChatRoom> {
-        return  chatRoomV2Repository.findAll();
+        return chatRoomV2Repository.findAll();
     }
 
     @Transactional

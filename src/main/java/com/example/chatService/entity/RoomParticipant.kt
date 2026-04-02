@@ -56,8 +56,10 @@ class RoomParticipant(
         @Column(nullable = false)
         var updatedAt: OffsetDateTime = OffsetDateTime.now()
 ) {
+    constructor(roomId: String, userId: String, roomRole: RoomRole) : this() {
+    }
 
-   @PrePersist
+    @PrePersist
    fun onCreate() {
        val now = OffsetDateTime.now()
        joinedAt = now

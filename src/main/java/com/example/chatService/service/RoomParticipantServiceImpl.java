@@ -75,11 +75,11 @@ public class RoomParticipantServiceImpl implements RoomParticipantService {
 
         RoomParticipant p = roomParticipantRepository.findByRoomIdAndUserId(roomId, userId)
                 .orElseGet(() -> roomParticipantRepository.save(
-                        RoomParticipant.builder()
-                                .roomId(roomId)
-                                .userId(userId)
-                                .role(roomRole)
-                                .build()
+                        new RoomParticipant(
+                                roomId,
+                                userId,
+                                roomRole
+                        )
                 ));
 
 //        System.out.println("isActive = " + p.isActive());
