@@ -20,12 +20,13 @@ class User(
         @Column(length = 36, nullable = false)
         var id: String = UUID.randomUUID().toString(),
 
-        @Column(nullable = true, unique = true)
+        @Column(name = "username", nullable = true, unique = true)
         var usernameValue: String? = null,
 
         @Column(nullable = false)
         var nicknameCompleted: Boolean = false,
 
+        @Column(name = "password")
         var passwordValue: String? = null,
 
         @Column(nullable = false, unique = true)
@@ -70,7 +71,7 @@ class User(
 
     override fun getPassword(): String? = passwordValue ?: ""
 
-    override fun getUsername(): String? = email ?: ""
+    override fun getUsername(): String? = usernameValue ?: ""
 
     override fun isAccountNonExpired(): Boolean = true
 

@@ -56,9 +56,9 @@ class AuthService(
             throw IllegalArgumentException("소셜 로그인으로 가입한 계정입니다. 해당 소셜 로그인을 이용해주세요.")
         }
 
-//        if (user.passwordValue.isNullOrBlank()) {
-//            throw IllegalArgumentException("비밀번호가 없는 계정입니다.")
-//        }
+        if (user.passwordValue.isNullOrBlank()) {
+            throw IllegalArgumentException("비밀번호가 없는 계정입니다.")
+        }
 
         val authentication = authenticationManager.authenticate(
                 UsernamePasswordAuthenticationToken(
