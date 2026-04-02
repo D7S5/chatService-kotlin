@@ -5,7 +5,6 @@ import com.example.chatService.dto.*;
 import com.example.chatService.entity.Friend;
 import com.example.chatService.entity.User;
 import com.example.chatService.repository.FriendRepository;
-import com.example.chatService.repository.FriendRequestRepository;
 import com.example.chatService.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

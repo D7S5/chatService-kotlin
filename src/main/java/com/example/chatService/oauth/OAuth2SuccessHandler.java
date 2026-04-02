@@ -63,7 +63,7 @@ public class OAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
         cookieUtil.addRefreshTokenCookie(response, refreshToken);
 
         String encoded = URLEncoder.encode(accessToken, StandardCharsets.UTF_8);
-        String redirectUrl = !user.isNicknameCompleted()
+        String redirectUrl = !user.getNicknameCompleted()
                 ? frontendUrl + "/oauth/nickname?token=" + encoded
                 : frontendUrl + "/oauth/success?token=" + encoded;
 

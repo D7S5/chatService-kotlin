@@ -3,6 +3,7 @@ package com.example.chatService.controller;
 import com.example.chatService.dto.InviteCodeResponse;
 import com.example.chatService.dto.InviteJoinRequest;
 import com.example.chatService.dto.JoinByInviteResponse;
+import com.example.chatService.dto.RoomResponse;
 import com.example.chatService.security.UserPrincipal;
 import com.example.chatService.service.ChatRoomService;
 import com.example.chatService.service.RoomInviteService;

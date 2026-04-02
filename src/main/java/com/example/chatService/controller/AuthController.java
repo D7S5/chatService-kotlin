@@ -2,12 +2,10 @@ package com.example.chatService.controller;
 
 import com.example.chatService.dto.*;
 import com.example.chatService.security.AuthService;
-import com.example.chatService.security.CookieUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.PostMapping;

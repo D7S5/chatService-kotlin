@@ -27,12 +27,12 @@ public class UserService {
                 .orElseThrow(() ->
                         new IllegalArgumentException("사용자를 찾을 수 없습니다."));
 
-        if (userRepository.existsByUsername(trimmed)) {
+        if (userRepository.existsByUsernameValue(trimmed)) {
             throw new IllegalStateException("이미 사용 중인 닉네임입니다.");
         }
 
         try {
-            user.setUsername(trimmed);
+            user.setUsernameValue(trimmed);
             user.setNicknameCompleted(true);
             userRepository.save(user);
         } catch (DataIntegrityViolationException e) {

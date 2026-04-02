@@ -17,7 +17,7 @@ data class RoomResponse(
         val inviteToken : String?
 ) {
     companion object {
-        fun from(r : ChatRoom) : RoomResponse {
+        fun from(r: ChatRoom): RoomResponse {
             return RoomResponse(
                     roomId = r.roomId,
                     name = r.name,
@@ -31,7 +31,8 @@ data class RoomResponse(
                     inviteToken = null
             )
         }
-        fun of(r: ChatRoom, inviteToken: String?) : RoomResponse {
+
+        fun of(r: ChatRoom, inviteToken: String?): RoomResponse {
             return RoomResponse(
                     roomId = r.roomId,
                     name = r.name,
@@ -43,6 +44,21 @@ data class RoomResponse(
                     largeRoom = r.largeRoom,
                     ownerUserId = r.ownerUserId,
                     inviteToken = inviteToken
+            )
+        }
+
+        fun inaccessible(room: ChatRoom, reason: String): RoomResponse {
+            return RoomResponse(
+                    roomId = room.roomId,
+                    name = room.name,
+                    type = room.type,
+                    currentCount = room.currentCount,
+                    maxParticipants = room.maxParticipants,
+                    accessible = false,
+                    reason = reason,
+                    largeRoom = room.largeRoom,
+                    ownerUserId = room.ownerUserId,
+                    inviteToken = null
             )
         }
     }

@@ -29,7 +29,7 @@ public class OAuthApi {
         UserPrincipal principal = (UserPrincipal) authentication.getPrincipal();
         User user = userRepository.findById(principal.getId()).orElseThrow();
 
-        user.setUsername(nickname);
+        user.setUsernameValue(nickname);
         user.setNicknameCompleted(true);
 
         userRepository.save(user);

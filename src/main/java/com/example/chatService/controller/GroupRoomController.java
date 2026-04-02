@@ -1,6 +1,7 @@
 package com.example.chatService.controller;
 
 import com.example.chatService.dto.ChatMessageResponse;
+import com.example.chatService.dto.RoomResponse;
 import com.example.chatService.service.GroupRoomService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

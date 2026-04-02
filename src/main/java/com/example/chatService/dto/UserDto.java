@@ -29,7 +29,7 @@ public class UserDto {
                 user.getUsername(),
                 user.getEmail(),
                 user.getRole(),
-                user.isNicknameCompleted()
+                user.getNicknameCompleted()
         );
     }
 }

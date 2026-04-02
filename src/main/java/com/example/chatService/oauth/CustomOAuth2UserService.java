@@ -32,7 +32,7 @@ public class CustomOAuth2UserService
                         .getUserNameAttributeName();
 
         OAuthAttributes attributes =
-                OAuthAttributes.of(
+                OAuthAttributes.Companion.of(
                         registrationId,
                         userNameAttributeName,
                         oAuth2User.getAttributes()

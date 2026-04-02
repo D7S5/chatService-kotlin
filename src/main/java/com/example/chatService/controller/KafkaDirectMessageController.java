@@ -16,9 +16,6 @@ public class KafkaDirectMessageController {
 
     @MessageMapping("/dm.send")
     public void send(DMMessageKafkaDto dto) {
-        if ( dto.getSentAt() == 0L)
-            dto.setSentAt(System.currentTimeMillis());
-
         dmProducerService.publish(dto);
     }
 }

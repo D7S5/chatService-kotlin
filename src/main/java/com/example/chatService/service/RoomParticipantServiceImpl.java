@@ -59,7 +59,6 @@ public class RoomParticipantServiceImpl implements RoomParticipantService {
         RoomRole role = hasPermission(roomId, userId);
 
         joinAsRole(roomId, userId, role);
-//        System.out.println(role);
     }
 
     public RoomRole hasPermission(String roomId, String userId) {
@@ -340,7 +339,7 @@ public class RoomParticipantServiceImpl implements RoomParticipantService {
 
         if (cached != null) return cached;
 
-        String fromDb = userRepository.findUsernameById(userId);
+        String fromDb = userRepository.findUsernameValueById(userId);
 
         if (fromDb == null) {
             log.warn("Username not found for userId={}", userId);

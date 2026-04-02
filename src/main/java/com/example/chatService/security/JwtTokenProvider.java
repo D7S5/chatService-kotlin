@@ -4,7 +4,6 @@ import com.example.chatService.entity.User;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import jakarta.annotation.PostConstruct;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.GrantedAuthority;
@@ -59,7 +58,7 @@ public class JwtTokenProvider {
                 .claim("roles", roles)
                 .claim("email", user.getEmail())
                 .claim("username", user.getUsername())
-                .claim("nicknameCompleted", user.isNicknameCompleted())
+                .claim("nicknameCompleted", user.getNicknameCompleted())
                 .issuedAt(now)
                 .expiration(expiry)
                 .signWith(key)
@@ -79,7 +78,7 @@ public class JwtTokenProvider {
                 .claim("email", user.getEmail())
                 .claim("username", user.getUsername())
                 .claim("roles", roles)
-                .claim("nicknameCompleted", user.isNicknameCompleted())
+                .claim("nicknameCompleted", user.getNicknameCompleted())
                 .issuedAt(now)
                 .expiration(expiry)
                 .signWith(key)
