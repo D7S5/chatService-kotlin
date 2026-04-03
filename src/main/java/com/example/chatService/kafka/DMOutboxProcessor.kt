@@ -42,11 +42,13 @@ class DMOutboxProcessor(
 
                 val roomId = box.roomId ?: throw IllegalStateException("roomId is null")
                 val senderId = box.senderId ?: throw IllegalStateException("senderId is null")
+                val senderName = box.senderName ?: throw IllegalStateException("senderName is null")
                 val content = box.content ?: throw IllegalStateException("content is null")
 
                 val message = DMMessageKafkaDto(
                         roomId = roomId,
                         senderId = senderId,
+                        senderName = senderName,
                         content = content,
                         sentAt = box.eventTimestamp
                 )

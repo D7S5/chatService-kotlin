@@ -25,6 +25,8 @@ class DMMessage(
 
         @Column(length = 36, nullable = false)
         var senderId: String? = null,
+        @Column(name = "sender_name")
+        var senderName : String? = null,
 
         @Column(nullable = false, columnDefinition = "TEXT")
         var content: String? = null,

@@ -17,6 +17,7 @@ class DMProducerService (
         val outbox = DMOutbox(
                 roomId = dto.roomId,
                 senderId = dto.senderId,
+                senderName = dto.senderName,
                 content = dto.content,
                 eventTimestamp = dto.sentAt,
                 status = MessagingStatus.NEW,

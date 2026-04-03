@@ -33,12 +33,11 @@ class DmStoreConsumer (
         val message = DMMessage(
                 room = room,
                 senderId = dto.senderId,
+                senderName = dto.senderName,
                 content = dto.content,
                 sentAt = sentAt,
                 isRead = false
         )
-
         messageRepository.save(message)
-
     }
 }

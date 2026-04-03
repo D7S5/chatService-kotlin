@@ -72,7 +72,7 @@ public class RoomParticipantServiceImpl implements RoomParticipantService {
     @Transactional
     public void joinAsRole(String roomId, String userId, RoomRole roomRole) {
 
-        System.out.println("joinAsRole = " + roomId + " " + userId + " " + roomRole);
+//        System.out.println("joinAsRole = " + roomId + " " + userId + " " + roomRole);
         RoomParticipant p = roomParticipantRepository.findByRoomIdAndUserId(roomId, userId)
                 .orElseGet(() -> roomParticipantRepository.save(
                         new RoomParticipant(

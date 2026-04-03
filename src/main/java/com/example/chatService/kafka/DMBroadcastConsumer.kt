@@ -1,6 +1,7 @@
 package com.example.chatService.kafka
 
 import com.example.chatService.dto.DMMessageKafkaDto
+import com.example.chatService.dto.DmMessageResponse
 import com.example.chatService.entity.DMMessage
 import com.example.chatService.entity.DMRoom
 import com.example.chatService.repository.DMRoomRepository
@@ -34,13 +35,16 @@ class DMBroadcastConsumer(
                 ZoneId.of("Asia/Seoul")
         )
 
-        val message = DMMessage(
-                room = room,
+        val message = DmMessageResponse(
+                roomId = dto.roomId,
                 senderId = dto.senderId,
+                senderName = dto.senderName,
                 content = dto.content,
                 sentAt = sentAt,
                 isRead = false
         )
+
+        println(message)
 
         val receiverId = dmService.getReceiverId(room.roomId!!, dto.senderId)
 

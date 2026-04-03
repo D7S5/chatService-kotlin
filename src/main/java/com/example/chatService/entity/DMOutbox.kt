@@ -22,6 +22,8 @@ class DMOutbox(
         var roomId: String? = "",
 
         var senderId: String? = "",
+        @Column(nullable = false, length = 40)
+        var senderName: String? = "",
 
         @Column(columnDefinition = "TEXT")
         var content: String? = "",
