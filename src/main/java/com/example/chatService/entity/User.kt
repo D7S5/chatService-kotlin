@@ -18,7 +18,7 @@ class User(
 
         @Id
         @Column(length = 36, nullable = false)
-        var id: String = UUID.randomUUID().toString(),
+        var id: String? = UUID.randomUUID().toString(),
 
         @Column(name = "username", nullable = true, unique = true)
         var usernameValue: String? = null,
