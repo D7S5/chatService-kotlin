@@ -27,7 +27,7 @@ class RoomParticipant(
 
         @Enumerated(EnumType.STRING)
         @Column(nullable = false, length = 20)
-        var role : RoomRole? = RoomRole.MEMBER,
+        var role : RoomRole? = null,
 
         @Column(nullable = false)
         var joinedAt: OffsetDateTime = OffsetDateTime.now(),
@@ -56,8 +56,11 @@ class RoomParticipant(
         @Column(nullable = false)
         var updatedAt: OffsetDateTime = OffsetDateTime.now()
 ) {
-    constructor(roomId: String, userId: String, roomRole: RoomRole) : this() {
-    }
+    constructor(roomId: String, userId: String, roomRole: RoomRole) : this(
+        roomId = roomId,
+        userId = userId,
+        role = roomRole
+    )
 
     @PrePersist
    fun onCreate() {
