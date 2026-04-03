@@ -27,7 +27,7 @@ class RoomParticipant(
 
         @Enumerated(EnumType.STRING)
         @Column(nullable = false, length = 20)
-        var role : RoomRole? = null,
+        var role : RoomRole? = RoomRole.MEMBER,
 
         @Column(nullable = false)
         var joinedAt: OffsetDateTime = OffsetDateTime.now(),
@@ -65,8 +65,6 @@ class RoomParticipant(
        joinedAt = now
        createdAt = now
        updatedAt = now
-       isActive = false
-       isBanned = false
    }
 
     @PreUpdate

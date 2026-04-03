@@ -72,6 +72,7 @@ public class RoomParticipantServiceImpl implements RoomParticipantService {
     @Transactional
     public void joinAsRole(String roomId, String userId, RoomRole roomRole) {
 
+        System.out.println("joinAsRole = " + roomId + " " + userId + " " + roomRole);
         RoomParticipant p = roomParticipantRepository.findByRoomIdAndUserId(roomId, userId)
                 .orElseGet(() -> roomParticipantRepository.save(
                         new RoomParticipant(
@@ -312,8 +313,9 @@ public class RoomParticipantServiceImpl implements RoomParticipantService {
 
     private RoomParticipant getParticipant(String roomId, String userId) {
         return roomParticipantRepository.findByRoomIdAndUserId(roomId, userId)
-                .orElseThrow(() ->
-                        new IllegalStateException("Participant not found"));
+                .orElseThrow(() -> new IllegalStateException(
+                        "Participant not found. roomId=" + roomId + ", userId=" + userId
+                ));
     }
 
     private void validateOwner(String roomId, String userId) {

@@ -78,11 +78,8 @@ class ChatRoomService(
     }
 
     fun joinRoom(roomId: String, userId: String) {
-
         chatRoomV2Repository.findById(roomId)
                 .orElseThrow { IllegalArgumentException("Room not found") }
         service.joinRoom(roomId, userId)
     }
-
-
 }

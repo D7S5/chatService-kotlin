@@ -51,7 +51,7 @@ class User(
             password: String,
             email: String,
             role: Role
-    ) : this(
+    ) : this (
             usernameValue = username,
             passwordValue = password,
             email = email,
