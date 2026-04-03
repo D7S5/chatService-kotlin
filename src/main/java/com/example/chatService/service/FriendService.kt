@@ -55,27 +55,41 @@ class FriendService (
         )
     }
 
-    @Transactional
-    fun getReceivedRequests(userId : String) : List<FriendRequestDto> {
-        val request = friendRepository.findPendingRequestsReceivedByUserId(userId)
+    fun getReceivedRequests(userId: String): List<FriendRequestDto> {
+        val requests = friendRepository.findPendingRequestsReceivedByUserId(userId)
 
-        return request.map {
-            friends -> FriendRequestDto(
-                    id = friends.id,
-                    toUserId = friends.friend?.id,
-                    fromUserNickname = friends.user!!.usernameValue,
-                    fromUserId = friends.user?.id,
-                    status = friends.status
+        return requests.map { relation ->
+            val fromUser = relation.user
+                    ?: throw IllegalArgumentException("친구 요청 보낸 사용자가 없습니다")
+            val toUser = relation.friend
+                    ?: throw IllegalArgumentException("친구 요청 대상 사용자가 없습니다")
+            val status = relation.status
+                    ?: throw IllegalArgumentException("친구 요청 상태가 없습니다")
+
+            FriendRequestDto(
+                    id = relation.id,
+                    toUserId = toUser.id,
+                    fromUserNickname = fromUser.usernameValue,
+                    fromUserId = fromUser.id,
+                    status = status
             )
-        }.toList()
+        }
     }
 
     @Transactional(readOnly = true)
-    fun getFriendList(userId: String) : List<User?> {
+    fun getFriendList(userId: String) : List<User> {
         return friendRepository.findAllRelatedWithFetch(userId)
                 .filter { f -> f.status == FriendStatus.ACCEPTED }
-                .map { if (it.user?.id == userId) it.friend else it.user  }
-                .distinct()
+                .mapNotNull { relation ->
+                    val user = relation.user
+                    val friend = relation.friend
+
+                    when {
+                        user?.id == userId && friend != null -> friend
+                        friend?.id == userId && user != null -> user
+                        else -> null
+                    }
+                }.distinctBy { it.id }
     }
 
     @Transactional
@@ -99,9 +113,9 @@ class FriendService (
             throw IllegalArgumentException("이미 처리된 요청입니다.")
         }
 
-        val sender = request.friend
+        val sender = request.user
                 ?: throw IllegalArgumentException("요청 보낸 사용자가 없습니다")
-        val receiver = request.user
+        val receiver = request.friend
                 ?: throw IllegalArgumentException("요청 받은 사용자가 없습니다")
 
         request.status = FriendStatus.ACCEPTED
