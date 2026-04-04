@@ -7,7 +7,10 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
+
+import java.security.Principal;
 
 @RestController
 @RequestMapping("/api/user/friends")
@@ -33,8 +36,9 @@ public class FriendRequestController {
     }
 
     @PostMapping("/reject/{id}")
-    public ResponseEntity<?> reject(@PathVariable Long id) {
-        return ResponseEntity.ok(friendService.reject(id));
+    public ResponseEntity<?> reject(@PathVariable Long id,
+                                    @AuthenticationPrincipal UserPrincipal userPrincipal) {
+        return ResponseEntity.ok(friendService.reject(id, userPrincipal));
     }
 
     @GetMapping("/list/{userId}")

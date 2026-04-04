@@ -6,6 +6,7 @@ import com.example.chatService.entity.Friend
 import com.example.chatService.entity.User
 import com.example.chatService.repository.FriendRepository
 import com.example.chatService.repository.UserRepository
+import com.example.chatService.security.UserPrincipal
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
@@ -149,14 +150,20 @@ class FriendService (
     }
 
     @Transactional
-    fun reject(requestId: Long) : String {
+    fun reject(requestId: Long, user : UserPrincipal) : String {
         val req = friendRepository.findById(requestId)
                 .orElseThrow { IllegalArgumentException("요청 없음") }
+
+        val blockUser = when (req.user?.id) {
+            user.id -> req.user
+            else -> {req.friend}
+        }
 
         if (req.status != FriendStatus.PENDING)
             throw IllegalArgumentException("이미 처리됨")
 
         req.status = FriendStatus.BLOCKED
+        req.blockedBy = blockUser
         return "거절 완료"
     }
 }
