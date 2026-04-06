@@ -3,6 +3,7 @@ package com.example.chatService.config;
 import com.example.chatService.dto.DMMessageKafkaDto;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
@@ -17,6 +18,8 @@ import java.util.Map;
 @EnableKafka
 public class KafkaConsumerConfig {
 
+    @Value("${spring.kafka.bootstrap-server}")
+    private String BOOTSTRAP_SERVERS;
     @Bean
     public ConsumerFactory<String, DMMessageKafkaDto> kafkaConsumerFactory() {
         JsonDeserializer<DMMessageKafkaDto> deserializer =
@@ -25,7 +28,7 @@ public class KafkaConsumerConfig {
 
         return new DefaultKafkaConsumerFactory<>(
                 Map.of(
-                        ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092",
+                        ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVERS,
                         ConsumerConfig.GROUP_ID_CONFIG, "chat_service",
                         ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class,
                         ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class,

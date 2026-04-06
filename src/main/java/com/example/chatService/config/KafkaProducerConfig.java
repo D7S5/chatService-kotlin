@@ -3,6 +3,7 @@ package com.example.chatService.config;
 import com.example.chatService.dto.DMMessageKafkaDto;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
@@ -18,11 +19,14 @@ import java.util.Map;
 @EnableKafka
 public class KafkaProducerConfig {
 
+    @Value("${spring.kafka.bootstrap-server}")
+    private String BOOTSTRAP_SERVER;
+
     @Bean
     public ProducerFactory<String, DMMessageKafkaDto> producerFactory() {
         Map<String, Object> config = new HashMap<>();
 
-        config.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        config.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVER);
         config.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         config.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
 
