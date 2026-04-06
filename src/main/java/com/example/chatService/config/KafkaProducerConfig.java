@@ -19,7 +19,7 @@ import java.util.Map;
 @EnableKafka
 public class KafkaProducerConfig {
 
-    @Value("${spring.kafka.bootstrap-server}")
+    @Value("${spring.kafka.bootstrap-servers}")
     private String BOOTSTRAP_SERVER;
 
     @Bean

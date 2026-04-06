@@ -18,7 +18,7 @@ import java.util.Map;
 @EnableKafka
 public class KafkaConsumerConfig {
 
-    @Value("${spring.kafka.bootstrap-server}")
+    @Value("${spring.kafka.bootstrap-servers}")
     private String BOOTSTRAP_SERVERS;
     @Bean
     public ConsumerFactory<String, DMMessageKafkaDto> kafkaConsumerFactory() {

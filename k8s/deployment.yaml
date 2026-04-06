@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: chat-service
-          image: couu/chatservice-kotlin:latest
+          image: couu/chatservice-kotlin:v2
           imagePullPolicy: Always
           ports:
             - containerPort: 9090
@@ -31,7 +31,8 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.name
-
+            - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
+              value: "kafka:9092"
             # Pod마다 고유 consumer group/id 부여
             - name: CHAT_KAFKA_CONSUMER_GROUP_ID
               value: "chat-ws-$(POD_NAME)"
