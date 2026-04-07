@@ -13,7 +13,8 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
 
   kafka:
-    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:kafka:9092}
+#    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:kafka:9092}
+    bootstrap-servers: localhost:9092
     consumer:
       key-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
@@ -86,6 +87,7 @@ jwt:
   secret: ${JWT_SECRET}
   access-token-expiry: 450000   # 7분
   refresh-token-expiry: 604800000 # 7일
+
 server:
   port: 9090
 

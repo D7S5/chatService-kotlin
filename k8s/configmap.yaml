@@ -11,3 +11,5 @@ data:
   # Redis 호스트/포트가 코드에서 기본 localhost를 쓴다면 함께 넣으세요.
   SPRING_DATA_REDIS_HOST: "172.28.4.215"
   SPRING_DATA_REDIS_PORT: "6379"
+
+  SERVER_PORT: 30572

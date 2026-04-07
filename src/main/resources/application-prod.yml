@@ -88,7 +88,7 @@ jwt:
   access-token-expiry: 450000   # 7분
   refresh-token-expiry: 604800000 # 7일
 server:
-  port: 9090
+  port: ${SERVER_PORT}
 
 chat:
   kafka:

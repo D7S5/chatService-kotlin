@@ -48,7 +48,7 @@ public class CookieUtil {
         }
 
         for (Cookie cookie : cookies) {
-            System.out.println("cookie = " + cookie.getName());
+//            System.out.println("cookie = " + cookie.getName());
             if (REFRESH_TOKEN_COOKIE.equals(cookie.getName())) {
                 return cookie.getValue();
             }
