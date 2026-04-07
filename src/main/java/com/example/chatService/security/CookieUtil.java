@@ -41,13 +41,19 @@ public class CookieUtil {
     }
 
     public String getRefreshToken(HttpServletRequest request) {
-        if (request.getCookies() == null) return null;
+        Cookie[] cookies = request.getCookies();
+        if (cookies == null) {
+            System.out.println("No cookies in request");
+            return null;
+        }
 
-        for (Cookie cookie : request.getCookies()) {
+        for (Cookie cookie : cookies) {
+            System.out.println("cookie = " + cookie.getName());
             if (REFRESH_TOKEN_COOKIE.equals(cookie.getName())) {
                 return cookie.getValue();
             }
         }
+
         return null;
     }
 

@@ -39,7 +39,7 @@ class AuthController (
     @PostMapping("/logout")
     fun logout(
             response: HttpServletResponse,
-            authentication : Authentication,
+            authentication : Authentication?,
             request: HttpServletRequest
     ): ResponseEntity<Void> {
         authService.logout(response, authentication, request)
