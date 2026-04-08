@@ -22,10 +22,10 @@ class ChatMessage(
         timestamp = OffsetDateTime.now()
     }
 
-    constructor(content: String?, sender: String?, type: MessageType?) : this(
-        content = content,
-        sender = sender,
-        type = type
+    constructor(messageContent: String?, messageSender: String?, messageType: MessageType?) : this(
+        content = messageContent,
+        sender = messageSender,
+        type = messageType
     )
 
     enum class MessageType {

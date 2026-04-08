@@ -46,7 +46,7 @@ class DMBroadcastConsumer(
 
         println(message)
 
-        val receiverId = dmService.getReceiverId(room.roomId!!, dto.senderId)
+        val receiverId = dmService.getReceiverId(room.roomId!!, dto.senderId) ?: return
 
         messagingTemplate.convertAndSendToUser(receiverId, "/queue/dm", message)
         messagingTemplate.convertAndSendToUser(dto.senderId, "/queue/dm", message)

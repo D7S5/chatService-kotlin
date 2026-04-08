@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.chatService.component.ChatRateLimiterTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-04-08T05:31:36.870Z" hostname="austin-750XGK" time="0.318">
+  <properties/>
+  <testcase name="allowOrBan bans user after limit exceeded()" classname="com.example.chatService.component.ChatRateLimiterTest" time="0.102"/>
+  <testcase name="allowOrBan allows first request and sets one second expiry()" classname="com.example.chatService.component.ChatRateLimiterTest" time="0.212"/>
+  <testcase name="allowOrBan returns false for banned user()" classname="com.example.chatService.component.ChatRateLimiterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

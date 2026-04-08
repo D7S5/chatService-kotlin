@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.chatService.redis.WsTokenServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-04-08T05:31:39.710Z" hostname="austin-750XGK" time="0.02">
+  <properties/>
+  <testcase name="createTokenForUser stores token with ttl()" classname="com.example.chatService.redis.WsTokenServiceTest" time="0.013"/>
+  <testcase name="consumeToken returns null when token does not exist()" classname="com.example.chatService.redis.WsTokenServiceTest" time="0.003"/>
+  <testcase name="consumeToken returns user id and deletes token()" classname="com.example.chatService.redis.WsTokenServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

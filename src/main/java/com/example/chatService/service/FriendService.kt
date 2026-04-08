@@ -143,7 +143,7 @@ class FriendService (
         )
 
         eventPublisher.publishAcceptFriendEvent(
-                sender.id,
+                sender.id ?: throw IllegalStateException("sender id is missing"),
                 publishAcceptFriendEvent
         )
         return "친구 수락 완료"

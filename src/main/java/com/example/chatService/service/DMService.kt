@@ -69,9 +69,12 @@ class DMService(
         return rooms.map { room ->
             val targetUserId = if (room.userAId == myUserId) room.userBId else room.userAId
 
-            val targetUser = userRepository.findById(targetUserId)
+            val targetUser = userRepository.findById(targetUserId ?: throw RuntimeException("user not found"))
                     .orElseThrow { RuntimeException("user not found") }
-            val unread = dmMessageRepository.countUnread(room.roomId, myUserId)
+            val unread = dmMessageRepository.countUnread(
+                    room.roomId ?: throw RuntimeException("room id not found"),
+                    myUserId
+            )
 
             DMRoomDto(
                     room.roomId,

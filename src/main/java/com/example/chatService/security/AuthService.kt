@@ -51,7 +51,7 @@ class AuthService(
             request: LoginRequest,
             response: HttpServletResponse
     ): LoginResponse {
-        val user = userRepository.findByEmail(request.email())
+        val user = userRepository.findByEmail(request.email)
                 .orElseThrow { UsernameNotFoundException("User not found") }
 
         if (user.provider != AuthProvider.LOCAL) {
@@ -64,8 +64,8 @@ class AuthService(
 
         val authentication = authenticationManager.authenticate(
                 UsernamePasswordAuthenticationToken(
-                        request.email(),
-                        request.password()
+                        request.email,
+                        request.password
                 )
         )
 
@@ -181,18 +181,18 @@ class AuthService(
     }
 
     fun register(@Valid request: RegisterRequest) {
-        if (userRepository.existsByUsernameValue(request.username())) {
+        if (userRepository.existsByUsernameValue(request.username)) {
             throw IllegalArgumentException("이미 존재하는 닉네임입니다")
         }
 
-        if (userRepository.existsByEmail(request.email())) {
+        if (userRepository.existsByEmail(request.email)) {
             throw IllegalArgumentException("이미 존재하는 이메일입니다")
         }
 
         val user = User(
-                usernameValue = request.username(),
-                passwordValue = passwordEncoder.encode(request.password()),
-                email = request.email(),
+                usernameValue = request.username,
+                passwordValue = passwordEncoder.encode(request.password),
+                email = request.email,
                 role = Role.USER,
                 online = false,
                 provider = AuthProvider.LOCAL,

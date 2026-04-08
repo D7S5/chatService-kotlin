@@ -53,7 +53,7 @@ class DMOutboxProcessor(
                         sentAt = box.eventTimestamp
                 )
 
-                kafkaTemplate.send(TOPIC, box.roomId, message).get()
+                kafkaTemplate.send(TOPIC, box.roomId ?: "", message).get()
 
                 box.status = MessagingStatus.SENT
                 box.lockedBy = null
