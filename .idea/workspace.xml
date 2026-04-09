@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a450b2f7-d39b-44fb-8aa0-ae68f60caeb7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/chatService/config/GroupKafkaConsumerConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chatService/config/GroupKafkaConsumerConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/chatService/config/GroupKafkaProducerConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chatService/config/GroupKafkaProducerConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/chatService/config/KafkaConsumerConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chatService/config/KafkaConsumerConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/chatService/config/KafkaProducerConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chatService/config/KafkaProducerConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/chatService/config/RedisConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chatService/config/RedisConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/chatService/config/SchedulerConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chatService/config/SchedulerConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/chatService/config/SecurityConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chatService/config/SecurityConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/example/chatService/config/WebSocketConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/chatService/config/WebSocketConfig.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +171,7 @@
       <workItem from="1775547285884" duration="873000" />
       <workItem from="1775621960155" duration="5796000" />
       <workItem from="1775628369909" duration="108000" />
-      <workItem from="1775628505532" duration="613000" />
+      <workItem from="1775628505532" duration="2440000" />
     </task>
     <servers />
   </component>
